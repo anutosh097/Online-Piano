@@ -5,7 +5,7 @@ const Footer: FunctionComponent = () => {
 const currentYear = new Date().getFullYear()
 return (
 <footer className="footer">
-<a href="https://newline.co">Newline.co</a>
+<a target="_blank" rel="noreferrer" href="https://twitter.com/AnutoshGhosh5">Anutosh Ghosh</a>
 <br />
 {currentYear}
 </footer>
