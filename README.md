@@ -7,6 +7,6 @@
 
 UI of the piano keyboard, stay tuned for the video with the audio playing feature on the keyboard.
 
-
+![Screenshot (1006)](https://user-images.githubusercontent.com/81863474/146663924-78912538-c340-4651-afc5-97e5e956d12d.png)
 
 UI after adding fonts and logo
