@@ -6,7 +6,7 @@ import './style.css'
 
 interface KeyProps {
   type: NoteType
-  label: string
+  label: string   
   disabled?: boolean
   }
   export const Key: FunctionComponent<KeyProps> = (props) => {
