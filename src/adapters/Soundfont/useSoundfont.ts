@@ -43,7 +43,7 @@ export function useSoundfont({ AudioContext }: Settings): Adapted {
       audio.current,
       instrument
     )
-
+      
     setLoading(false)
     setCurrent(instrument)
     setPlayer(player)

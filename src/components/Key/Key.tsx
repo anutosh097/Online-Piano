@@ -1,4 +1,4 @@
-import React,{ FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactEventHandler } from "react"
 import { NoteType } from '../../domain/note'
 import clsx from 'clsx';
 import './style.css'
@@ -6,18 +6,29 @@ import './style.css'
 
 interface KeyProps {
   type: NoteType
-  label: string   
+  label: string
   disabled?: boolean
-  }
-  export const Key: FunctionComponent<KeyProps> = (props) => {
-  const { type, label, ...rest } = props
+
+  onUp: ReactEventHandler<HTMLButtonElement>
+  onDown: ReactEventHandler<HTMLButtonElement>
+}
+
+export const Key: FunctionComponent<KeyProps> = ({
+  type,
+  label,
+  onDown,
+  onUp,
+  ...rest
+}) => {
   return (
-  <button
-  className={clsx(`key key--${type}`)}
-  type="button"
-  {...rest}
-  >
-  {label}
-  </button>
+    <button
+      className={clsx(`key key--${type}`)}
+      onMouseDown={onDown}
+      onMouseUp={onUp}
+      type="button"
+      {...rest}
+    >
+      {label}
+    </button>
   )
-  }
+}
